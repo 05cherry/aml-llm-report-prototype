@@ -1,0 +1,58 @@
+{
+  "_comment": "시연용 더미 데이터. 실제 고객/거래 정보 아님. 5개 시나리오: A=구조화, B=통과계좌, C=신규+고위험, D=프로필불일치, E=정상(미탐지 대상)",
+  "accounts": [
+    {
+      "account_id": "ACC-A",
+      "account_age_days": 540,
+      "kyc_income_band": "50m_100m",
+      "occupation": "self_employed"
+    },
+    {
+      "account_id": "ACC-B",
+      "account_age_days": 210,
+      "kyc_income_band": "100m_plus",
+      "occupation": "company_employee"
+    },
+    {
+      "account_id": "ACC-C",
+      "account_age_days": 3,
+      "kyc_income_band": "30m_50m",
+      "occupation": "company_employee"
+    },
+    {
+      "account_id": "ACC-D",
+      "account_age_days": 95,
+      "kyc_income_band": "under_30m",
+      "occupation": "student"
+    },
+    {
+      "account_id": "ACC-E",
+      "account_age_days": 820,
+      "kyc_income_band": "50m_100m",
+      "occupation": "company_employee"
+    }
+  ],
+  "transactions": [
+    { "transaction_id": "T-A01", "account_id": "ACC-A", "timestamp": "2026-06-15T09:05:00+09:00", "type": "deposit", "amount_krw": 9800000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-A02", "account_id": "ACC-A", "timestamp": "2026-06-15T09:32:00+09:00", "type": "deposit", "amount_krw": 9500000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-A03", "account_id": "ACC-A", "timestamp": "2026-06-15T10:01:00+09:00", "type": "deposit", "amount_krw": 9700000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-A04", "account_id": "ACC-A", "timestamp": "2026-06-15T10:28:00+09:00", "type": "deposit", "amount_krw": 9600000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-A05", "account_id": "ACC-A", "timestamp": "2026-06-15T10:55:00+09:00", "type": "deposit", "amount_krw": 9900000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-A06", "account_id": "ACC-A", "timestamp": "2026-06-15T11:10:00+09:00", "type": "deposit", "amount_krw": 9400000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+
+    { "transaction_id": "T-B01", "account_id": "ACC-B", "timestamp": "2026-06-15T14:00:00+09:00", "type": "deposit", "amount_krw": 520000000, "asset": "BTC", "counterparty_address": "0xB1N4PUT9F2A7C3E8", "counterparty_risk": "none" },
+    { "transaction_id": "T-B02", "account_id": "ACC-B", "timestamp": "2026-06-15T14:35:00+09:00", "type": "withdrawal", "amount_krw": 515000000, "asset": "BTC", "counterparty_address": "0xB0UT2K9M5X1V6Q4D", "counterparty_risk": "none" },
+
+    { "transaction_id": "T-C01", "account_id": "ACC-C", "timestamp": "2026-06-15T16:20:00+09:00", "type": "deposit", "amount_krw": 180000000, "asset": "BTC", "counterparty_address": "0xMIX3R7H8N2W5Z9LQ", "counterparty_risk": "mixer" },
+    { "transaction_id": "T-C02", "account_id": "ACC-C", "timestamp": "2026-06-15T16:50:00+09:00", "type": "withdrawal", "amount_krw": 175000000, "asset": "BTC", "counterparty_address": "0xC0UT8B3J6R1Y4T7P", "counterparty_risk": "none" },
+
+    { "transaction_id": "T-D01", "account_id": "ACC-D", "timestamp": "2026-06-15T11:00:00+09:00", "type": "deposit", "amount_krw": 120000000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-D02", "account_id": "ACC-D", "timestamp": "2026-06-15T13:00:00+09:00", "type": "trade", "amount_krw": 100000000, "asset": "BTC", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-D03", "account_id": "ACC-D", "timestamp": "2026-06-15T15:00:00+09:00", "type": "withdrawal", "amount_krw": 90000000, "asset": "BTC", "counterparty_address": "0xD0UT5N2K8H4F1L6W", "counterparty_risk": "none" },
+
+    { "transaction_id": "T-E01", "account_id": "ACC-E", "timestamp": "2026-06-14T10:00:00+09:00", "type": "deposit", "amount_krw": 2000000, "asset": "KRW", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-E02", "account_id": "ACC-E", "timestamp": "2026-06-14T10:30:00+09:00", "type": "trade", "amount_krw": 1500000, "asset": "BTC", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-E03", "account_id": "ACC-E", "timestamp": "2026-06-15T09:15:00+09:00", "type": "trade", "amount_krw": 800000, "asset": "ETH", "counterparty_address": null, "counterparty_risk": "none" },
+    { "transaction_id": "T-E04", "account_id": "ACC-E", "timestamp": "2026-06-16T11:40:00+09:00", "type": "trade", "amount_krw": 1200000, "asset": "BTC", "counterparty_address": null, "counterparty_risk": "none" }
+  ]
+}
